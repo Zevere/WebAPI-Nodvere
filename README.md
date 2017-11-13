@@ -4,6 +4,8 @@
 
 Config: VSC, WIN10, Git
 
+
+Week 1 Nov 13 
 Objects | Task Status 
 ------------- | -------------
 ~ npm install | :white_check_mark: 
@@ -12,3 +14,5 @@ Objects | Task Status
 ~ Testing stage 1 |
 ~ Multi Routing design |
 ~ Testing stage 2 |
+~ Counting... |
+
