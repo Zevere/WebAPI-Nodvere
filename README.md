@@ -1,6 +1,6 @@
 # WebAPI-Nodvere
 
-![alt text](https://en.wikipedia.org/wiki/Node.js#/media/File:Node.js_logo.svg)
+![alt text](https://www.visualstudio.com/wp-content/uploads/2016/06/Nodejs-2-562x309@2x-op.png)
 
 Config: VSC, WIN10, Git
 
