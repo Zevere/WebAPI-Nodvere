@@ -19,4 +19,28 @@ function onHttpStart(){
     console.log("Express http server sets and listening on "+HTTP_PORT);
 }
 
-app.set("")
+app.set("view engine", ".hbs");
+
+app.engine(".hbs", exphbs({
+    extname: ".hbs",
+    helpers: {
+        equal:(lvalue,rvalue,option) =>{
+            if(arguments.length <= 3) throw new Error ("Express Handlebars accepts less than three paras");
+            if(lvalue != rvalue){return HTMLOptionsCollection.inverse(this);}
+            else {return HTMLOptionsCollection.fn(this)};
+        }
+        }
+    }));
+
+app.listen(HTTP_PORT,function onHttpStart(){
+    console.log(chalk.green("------Nodverve is statrt to fly-------"));
+    console.log(chalk.green("----------------SeatBelt---------------"));
+    return new Promise((res,req)=>{
+        //call the data_service init
+        data_service.initialize().then(() =>{
+            console.log(chalk.blue("------Data_service is on-------"));
+        }).catch((err) =>{
+            console.log(chalk.red("!!!!!!!" + err));
+        });
+        });
+    });
