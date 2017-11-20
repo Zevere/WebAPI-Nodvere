@@ -4,6 +4,14 @@ var chalk = require("chalk");
 var fs = require("fs");
 var path = require("path");
 
+var Schema = mongoose.Schema;
+
+const User = new Schema({
+    id : String,
+    first_name: String,
+    last_name: String,
+    joined_at: date
+})
 
 module.exports.initialize =() => {
     return new((promise,reject) => {
@@ -18,9 +26,13 @@ module.exports.initialize =() => {
 }
 
 module.exports.UserId =() => {
-    
+    //resolve 
 }
 
 module.exports.UserTask =() => {
-    
+    //resolve
+}
+
+module.exports.addUser =() => {
+       
 }
