@@ -44,3 +44,19 @@ app.listen(HTTP_PORT,function onHttpStart(){
         });
         });
     });
+
+app.get("/zv/users/:user_id",(req,res)=>{
+    data_service.UserId(req.query.status).then((data)=>{
+        res.render("User", {data:data,title:"User"});
+    }).catch((err)=>{
+        res.render("User",{data:data, title : "User"});
+    });
+});
+
+app.get("/zv/users/:user_id/tasks/:task_id",(req,res)=>{
+    data_service.UserTask(req.query.status).then((data)=>{
+        res.render("Task for User" + user_id, {data:data,title:"Task"});
+    }).catch((err)=>{
+        res.render("Task for User" + user_id,{data:data, title : "Task"});
+    });
+});
